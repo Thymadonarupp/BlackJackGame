@@ -12,10 +12,17 @@ let profile = {
 let chips = 200
 
 player.textContent = profile.name + " : " + chips + " $"
-function randomNumber(){
-    return Math.floor(Math.random() *13 + 1)
-}
 
+function randomNumber(){
+    return num = Math.floor(Math.random() *13 + 1)
+    if (num > 10) {
+        return 10
+    } else if (num === 1) {
+        return 11
+    } else {
+        return num
+    }
+}
 function startGame(){
   let cardOne = randomNumber()
   let cardTwo = randomNumber()
